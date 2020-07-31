@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
 <head>
 <!-- Credits Rotating text: Rachel Smith https://codepen.io/mohaiman/pen/MQqMyo -->
@@ -297,4 +296,3 @@ function splitLetters(word) {
 changeWord();
 setInterval(changeWord, 4000);
 </script>
-o/xatframes/bochonmix_magic.html
