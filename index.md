@@ -2,6 +2,9 @@
 <head>
 <!-- Credits Rotating text: Rachel Smith https://codepen.io/mohaiman/pen/MQqMyo -->
 <!-- Credits Moving boxes: Mohammad Abdul Mohaiman https://codepen.io/mohaiman/pen/MQqMyo -->
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato&display=swap">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+	
 <style>  
 @import url('https://fonts.googleapis.com/css?family=Exo:400,700');
 
@@ -186,6 +189,23 @@ p {
 
 .midnight {
   color: #2c3e50;
+}
+.info {
+  position: absolute;
+  height: 75px;
+  width: 150px;
+  top: 13%;
+  right: 3%;
+  padding: 20px;
+  color: #fff;
+  border-radius: 4px;
+  border: solid 1px #1B9CFC;
+}
+.info-icon {
+  position: absolute;
+  top: -18px;
+  margin-left: 65px;
+  color: #f1c40f;
 }
 
 @keyframes animate {
