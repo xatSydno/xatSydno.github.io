@@ -303,28 +303,28 @@ setInterval(changeWord, 4000);
 			<i class="fas fa-bolt fa-2x"></i>
 		</div>
 		<section class="power">
-			<div class="id">جار التحميل...</div>
-			<div class="name">جار التحميل...</div>
-			<div class="status">جار التحميل...</div>
-			<div class="price">جار التحميل...</div>
+			<div class="id">test zz1...</div>
+			<div class="name">test zz1...</div>
+			<div class="status">test zz1...</div>
+			<div class="price">test zz1...</div>
 		</section>
-	</section>
-	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-	<script>
-	String.prototype.capitalize = function() {
-		return this.charAt(0).toUpperCase() + this.slice(1);
-	}
-	const updatePower = () => {
-		$.getJSON("https://xatblog.net/api/latest?json", function(data) {
-			$('.id').html(data.result.id);
-			$('.name').html(data.result.name.capitalize());
-			$('.price').html('unknown' === data.result.price ? 'جهول' : data.result.price);
-			if ('unknown' === data.result.status) {
-				$('.status').html('جهول');
-			} else {
-				$('.status').html('limited' === data.result.status ? 'محدودة' : 'غير محدود');
-			}
-		});
-	}
-	updatePower();
-	</script>
+</section>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+String.prototype.capitalize = function() {
+	return this.charAt(0).toUpperCase() + this.slice(1);
+}
+const updatePower = () => {
+	$.getJSON("https://xatblog.net/api/latest?json", function(data) {
+		$('.id').html(data.result.id);
+		$('.name').html(data.result.name.capitalize());
+		$('.price').html('unknown' === data.result.price ? 'zz1' : data.result.price);
+		if ('unknown' === data.result.status) {
+			$('.status').html('zz1');
+		} else {
+			$('.status').html('limited' === data.result.status ? 'tt' : 'tt ttt');
+		}
+	});
+}
+updatePower();
+</script>
