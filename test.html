@@ -176,7 +176,7 @@ p {
   color: #fc5d85;
 }
 
-.html5group {
+.chat {
   color: #F7C731;
 }
 
@@ -215,7 +215,7 @@ p {
 <div class="context">
   	<h1><img src="https://xat.com/content/web/R00008/img/xatplanet.svg" width="60"> xat</h1>
 	<p class="animtext">
-		<span class="word html5group">xat.com/html5</span>
+		<span class="word chat">xat.com/chat</span>
 		<span class="word facebook">xat.com/facebook</span>
 		<span class="word html5wiki">xat.wiki/html5</span>
 		<span class="word twitter">xat.com/twitter</span>
@@ -295,4 +295,36 @@ function splitLetters(word) {
 
 changeWord();
 setInterval(changeWord, 4000);
+
+</script>
+
+<section class="info" dir="rtl">
+		<div class="info-icon">
+			<i class="fas fa-bolt fa-2x"></i>
+		</div>
+		<section class="power">
+			<div class="id">test zz1...</div>
+			<div class="name">test zz1...</div>
+			<div class="status">test zz1...</div>
+			<div class="price">test zz1...</div>
+		</section>
+</section>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+String.prototype.capitalize = function() {
+	return this.charAt(0).toUpperCase() + this.slice(1);
+}
+const updatePower = () => {
+	$.getJSON("https://xatblog.net/api/latest?json", function(data) {
+		$('.id').html(data.result.id);
+		$('.name').html(data.result.name.capitalize());
+		$('.price').html('unknown' === data.result.price ? 'zz1' : data.result.price);
+		if ('unknown' === data.result.status) {
+			$('.status').html('zz1');
+		} else {
+			$('.status').html('limited' === data.result.status ? 'tt' : 'tt ttt');
+		}
+	});
+}
+updatePower();
 </script>
